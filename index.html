@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Job Application - Diproma Infotech</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #1e88e5;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="file"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    textarea {
+      resize: vertical;
+      height: 100px;
+    }
+
+    button {
+      background-color: #1e88e5;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 15px;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #1565c0;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+      color: gray;
+    }
+
+    .message {
+      text-align: center;
+      color: green;
+      margin-top: 15px;
+      font-weight: bold;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Job Application Form<br>Diproma Infotech Pvt Ltd</h2>
+
+    <form id="jobForm">
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required />
+
+      <label for="resume">Upload Resume</label>
+      <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required />
+
+      <label for="message">Why do you want to join us?</label>
+      <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+
+      <button type="submit">Submit Application</button>
+    </form>
+
+    <div class="message" id="successMessage">Your application has been submitted successfully!</div>
+
+    <div class="footer">
+      © 2025 Diproma Infotech Pvt Ltd. All Rights Reserved.
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("jobForm").addEventListener("submit", function(event) {
+      event.preventDefault(); 
+
+     
+      document.getElementById("successMessage").style.display = "block";
+
+     
+      document.getElementById("jobForm").reset();
+    });
+  </script>
+
+</body>
+</html>
